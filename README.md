@@ -35,19 +35,19 @@ options:
 
 ### Usage samples
 ```
-  encrypt-poc.exe -e -i "c:\Hello world.pdf" -o "c:\Hello world ecrypted.pdf" -op owner -up user -p -4
+  encrypt-poc.exe -e -i "c:\Hello world.pdf" -o "c:\Hello world encrypted.pdf" -op owner -up user -p -4
   
 Creates new file with AES-GCM encryption, default permission (everything is allowed, no integrity protection s per ISO 32004) owner password is "owner" and user password is set to "user"  
 ```
 
 ```
-  ecrypt-poc.exe -e -i "c:\Hello world.pdf" -o "c:\Hello world ecrypted with IP.pdf" -op owner -up user -p -4396  
+  encrypt-poc.exe -e -i "c:\Hello world.pdf" -o "c:\Hello world encrypted with IP.pdf" -op owner -up user -p -4396  
 
 Creates new file with AES-GCM encryption. Owner password "owner" and user password is set to "user" The integrity protection as per ISO 32004 is set (bit #13 is not set) and bits #4 and #6 are not set, that means modifying the contents and annotations are dissalowed  
 ```
 
 ```
-  encrypt-poc.exe -d -i "c:\Hello world ecrypted with IP.pdf" -o "c:\Hello world decrypted.pdf" -op owner 
+  encrypt-poc.exe -d -i "c:\Hello world encrypted with IP.pdf" -o "c:\Hello world decrypted.pdf" -op owner 
   
 Opens encrypted file with provided "op" password and saves decrypted file  
 ```
